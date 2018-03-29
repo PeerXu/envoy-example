@@ -1,4 +1,22 @@
 static_resources:
+  clusters:
+  - name: local_service_grpc
+    connect_timeout: 0.250s
+    type: strict_dns
+    lb_policy: round_robin
+    http2_protocol_options: {}
+    hosts:
+    - socket_address:
+        address: 127.0.0.1
+        port_value: 5556
+  - name: zipkin
+    connect_timeout: 1s
+    type: strict_dns
+    lb_policy: round_robin
+    hosts:
+    - socket_address:
+        address: zipkin
+        port_value: 9411
   listeners:
   - address:
       socket_address:
@@ -10,7 +28,7 @@ static_resources:
         config:
           generate_request_id: true
           tracing:
-            operation_name: egress
+            operation_name: ingress
           codec_type: auto
           stat_prefix: ingress_http
           route_config:
@@ -32,24 +50,6 @@ static_resources:
           http_filters:
           - name: envoy.router
             config: {}
-  clusters:
-  - name: local_service_grpc
-    connect_timeout: 0.250s
-    type: strict_dns
-    lb_policy: round_robin
-    http2_protocol_options: {}
-    hosts:
-    - socket_address:
-        address: 127.0.0.1
-        port_value: 5556
-  - name: zipkin
-    connect_timeout: 1s
-    type: strict_dns
-    lb_policy: round_robin
-    hosts:
-    - socket_address:
-        address: zipkin
-        port_value: 9411
 tracing:
   http:
     name: envoy.zipkin
