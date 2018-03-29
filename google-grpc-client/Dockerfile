@@ -1,4 +1,4 @@
-FROM envoyproxy/envoy:latest
+FROM envoyproxy/envoy-alpine:latest
 
 RUN mkdir /var/log/envoy/
 COPY ./bin/greet /usr/local/bin/greet
