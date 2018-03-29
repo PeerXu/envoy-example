@@ -1,5 +1,5 @@
 hash: 4112c791cfb4f679b3f6a3a2bda012be3c530bbc3df3c88b36fa3939ddb81175
-updated: 2018-03-29T14:34:10.708155+08:00
+updated: 2018-03-29T14:39:37.77929+08:00
 imports:
 - name: github.com/golang/protobuf
   version: 925541529c1fa6821df4e44ce2723319eb2be768
@@ -21,7 +21,7 @@ imports:
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/PeerXu/envoy-example
-  version: c69931cbac5e8fabcafae1cbe9cc71cee61f2348
+  version: 653a567e6441d2a80d51d073afc39f813a65eef2
   subpackages:
   - google-grpc-client/protos
 - name: github.com/spf13/cobra
@@ -29,14 +29,22 @@ imports:
 - name: github.com/spf13/pflag
   version: ad68c28ee799163e627e77fcc6e8ecaa866e3535
 - name: golang.org/x/net
-  version: 6a513affb38dc9788b449d59ffed099b8de18fa0
+  version: 6078986fec03a1dcc236c34816c71b0e05018fda
   subpackages:
   - context
   - http2
   - http2/hpack
+  - idna
   - internal/timeseries
   - lex/httplex
   - trace
+- name: golang.org/x/text
+  version: ece95c760240037f89ebcbdd7155ac8cb52e38fa
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
 - name: google.golang.org/genproto
   version: ab0870e398d5dd054b868c0db1481ab029b9a9f2
   subpackages:

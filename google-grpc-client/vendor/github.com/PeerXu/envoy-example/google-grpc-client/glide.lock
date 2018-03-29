@@ -1,5 +1,5 @@
-hash: 270f22cd4dd5a728b74631e594bd5bd3256d91edd740517e750e9ce83ebcc1ed
-updated: 2018-03-29T14:05:15.571801+08:00
+hash: 4112c791cfb4f679b3f6a3a2bda012be3c530bbc3df3c88b36fa3939ddb81175
+updated: 2018-03-29T14:34:10.708155+08:00
 imports:
 - name: github.com/golang/protobuf
   version: 925541529c1fa6821df4e44ce2723319eb2be768
@@ -21,7 +21,7 @@ imports:
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/PeerXu/envoy-example
-  version: 43e24c98dd16fcb44ba45ce1be0b191fa8c37a11
+  version: c69931cbac5e8fabcafae1cbe9cc71cee61f2348
   subpackages:
   - google-grpc-client/protos
 - name: github.com/spf13/cobra
@@ -43,7 +43,7 @@ imports:
   - googleapis/api/annotations
   - googleapis/rpc/status
 - name: google.golang.org/grpc
-  version: f72b28a6d170d0938afd483331ba4e5d733785ae
+  version: afc05b9e1d36f289ea16ba294894486a3e458246
   subpackages:
   - balancer
   - balancer/base

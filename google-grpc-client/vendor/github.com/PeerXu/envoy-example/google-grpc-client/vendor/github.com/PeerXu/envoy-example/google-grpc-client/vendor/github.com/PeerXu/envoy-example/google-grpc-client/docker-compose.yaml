@@ -1,0 +1,32 @@
+version: '2'
+services:
+
+  greet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config/greet-grpc-envoy.yaml:/etc/greet-grpc-envoy.yaml
+    networks:
+      envoymesh:
+        aliases:
+          - zipkin
+    ports:
+      - "5555:5555"
+      - "9901:9901"
+    expose:
+      - "5555"
+
+  zipkin:
+    image: openzipkin/zipkin
+    networks:
+      envoymesh:
+        aliases:
+          - zipkin
+    ports:
+      - "9411:9411"
+    expose:
+      - "9411"
+
+networks:
+  envoymesh: {}
